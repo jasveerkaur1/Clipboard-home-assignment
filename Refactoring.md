@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+ * 1. First I reperated out the hardcoded values in as const
+ * 2. Clean the code by:
+ *  a. Handling the corner cases at first place
+ *  b. Adding a seperate function, stringfyInput
+ *  c. Renaming the candidate as generatedHash, as we are generating the hash and its more generic
+ *  d. Defining the generatedHash, after handling corner cases
+ *  e. If generatedHash.length > MAX_PARTITION_KEY_LENGTH, returing the value from block itself
